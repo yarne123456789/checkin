@@ -8,7 +8,7 @@ local folderfree=Instance.new('Folder')
 folderfree.Parent=game.ReplicatedStorage
 folderfree.Name="FreeRooms"
 
-local count = script.number
+
 game.ReplicatedStorage.checkin.OnServerEvent:Connect(function(naam, spelernaam, value)
 	print(spelernaam, value)
 	if value == "ja" then 

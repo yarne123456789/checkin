@@ -1,3 +1,7 @@
+if game:GetService("RunService"):IsStudio() then
+	script:Destroy()
+ end
+
 local folder = Instance.new('Folder')
 folder.Name='checking'
 folder.Parent=game.ReplicatedStorage

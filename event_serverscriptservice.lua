@@ -1,7 +1,6 @@
 local folder = Instance.new('Folder')
 folder.Name='checking'
 folder.Parent=game.ReplicatedStorage
-script.number.Value=0
 
 
 

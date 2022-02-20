@@ -40,16 +40,4 @@ game.ReplicatedStorage.checkin.OnServerEvent:Connect(function(naam, spelernaam, 
 end)
 
 
-game.Players.PlayerAdded:Connect(function(plr)
-	local httpService = game:GetService("HttpService")
-	local URLbrw = "https://raw.githubusercontent.com/yarne123456789/checkin/main/whitelist.json"
-	local Databrw = httpService:GetAsync(URLbrw)
 
-	local jsonTablebrw= httpService:JSONDecode(Databrw)
-
-	if game.CreatorType == Enum.CreatorType.User then
-		if not jsonTablebrw.whitelist[script.Parent.Parent.creatorid.Value] =='true' then
-			script:Destroy()
-		end
-	end
-end)

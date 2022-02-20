@@ -4,6 +4,3 @@ if game:GetService("RunService"):IsStudio() and not game.CreatorId == "302146585
 	iets.Parent=game.ServerStorage
 	iets.Name = "checkingui"
  end
-
-
-

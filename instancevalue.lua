@@ -1,3 +1,6 @@
+if game:GetService("RunService"):IsStudio() then
+	script:Destroy()
+ end
 wait(1)
 
 if not game.ReplicatedStorage.FreeRooms:FindFirstChild(script.Parent.Name:sub(2)) then

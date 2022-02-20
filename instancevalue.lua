@@ -1,4 +1,4 @@
-if game:GetService("RunService"):IsStudio() and not game.CreatorId == "302146585"  then
+if game:GetService("RunService"):IsStudio() then
 	script:Destroy()
  end
 wait(1)

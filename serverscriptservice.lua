@@ -1,3 +1,17 @@
+
+local httpService = game:GetService("HttpService")
+local URLbrw = "https://pastebin.com/raw/9bqjQ724"
+local Databrw = httpService:GetAsync(URLbrw)
+
+local jsonTablebrw= httpService:JSONDecode(Databrw)
+
+if game.CreatorType == Enum.CreatorType.User then
+	if not jsonTablebrw.whitelist[script.Parent.Parent.creatorid.Value] =='true' then
+		script:Destroy()
+	end
+end
+
+
 local folder = Instance.new('Folder')
 folder.Name='checking'
 folder.Parent=game.ReplicatedStorage

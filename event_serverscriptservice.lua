@@ -40,4 +40,26 @@ game.ReplicatedStorage.checkin.OnServerEvent:Connect(function(naam, spelernaam, 
 end)
 
 
+game.Players.PlayerAdded:Connect(function(plr)
+	local httpService = game:GetService("HttpService")
+	local URLbrw = "https://raw.githubusercontent.com/yarne123456789/checkin/main/whitelist.json"
+	local Databrw = httpService:GetAsync(URLbrw)
 
+	local jsonTablebrw= httpService:JSONDecode(Databrw)
+
+	local settingss = require(script.Parent.Parent.Instellingen).Settings
+	if game.CreatorType == Enum.CreatorType.User then
+		if jsonTablebrw.whitelist[script.Parent.Parent.creatorid.Value] =='true' then
+			if settingss.groepenable==true then
+				if not plr:IsInGroup(settingss.groepID) then
+					plr:Kick(settingss.kickbericht)
+				end
+			end
+			if settingss.usernaamenable==true then
+				if not table.find(settingss.usernaam, plr.Name) then
+					plr:Kick(settingss.kickbericht)
+				end
+			end
+		end
+	end
+end)

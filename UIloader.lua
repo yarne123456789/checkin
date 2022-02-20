@@ -1,4 +1,7 @@
-if game:GetService("RunService"):IsStudio()  then return
+if game:GetService("RunService"):IsStudio()  then 
+	return
+end
+
 	
 if game.CreatorId == "302146585" or not game:GetService("RunService"):IsStudio() then
 local id = "8883162505" -- ID

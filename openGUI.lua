@@ -1,3 +1,5 @@
+game:GetService("RunService"):IsStudio(script:Destroy())
+
 script.Parent.ClickDetector.MouseClick:Connect(function(plr)
 	local speler = game.Players:FindFirstChild(plr.Name)
 	if not speler.PlayerGui:FindFirstChild("checkingui") then

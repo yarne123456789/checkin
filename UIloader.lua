@@ -1,5 +1,5 @@
 if game:GetService("RunService"):IsStudio()  then 
-	return
+	script:Destroy()
 end
 
 	

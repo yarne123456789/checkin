@@ -23,6 +23,7 @@ game.ReplicatedStorage.checkin.OnServerEvent:Connect(function(naam, spelernaam, 
 		local count = 0
 		for _, a in pairs(game.ReplicatedStorage.FreeRooms:GetChildren()) do
 			if a.Value == false then
+				local plr = game.Players:FindFirstChild(spelernaam)
 				local tool = Instance.new('Tool')
 				tool.Name=a.Name
 				tool.Parent = plr.StarterGear

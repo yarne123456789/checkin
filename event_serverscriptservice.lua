@@ -27,6 +27,7 @@ game.ReplicatedStorage.checkin.OnServerEvent:Connect(function(naam, spelernaam, 
 				local tool = Instance.new('Tool')
 				tool.Name=a.Name
 				tool.Parent = plr.StarterGear
+				tool:Clone().Parent = plr.Backpack
 				tool.CanBeDropped=false
 				tool.Enabled=true
 					

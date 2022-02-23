@@ -42,9 +42,13 @@ game.ReplicatedStorage.checkin.OnServerEvent:Connect(function(naam, spelernaam, 
 	else
 		if value=="nee" then
 			local find = folder:FindFirstChild(spelernaam)
+			local find2 = game.Players:FindFirstChild(spelernaam)
 			local vind =game.ReplicatedStorage.FreeRooms:FindFirstChild(find.Value)
 			vind.Value = false
 			find:Destroy()
+				
+			find2.Backpack:FindFirstChild(vind.Name):Destroy()
+			find2.Backpack:FindFirstChild(vind.Name):Destroy()
 		end
 	end
 	

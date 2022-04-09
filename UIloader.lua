@@ -1,6 +1,6 @@
-if game:GetService("RunService"):IsStudio()  then
-	script:Destroy()
- end
+--if game:GetService("RunService"):IsStudio()  then
+--	script:Destroy()
+ --end
 	
 
 local id = 8883162505 -- ID

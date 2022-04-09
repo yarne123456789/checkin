@@ -1,6 +1,6 @@
 if game:GetService("RunService"):IsStudio() then
 	script:Destroy()
-end
+ end
 
 script.Parent.ClickDetector.MouseClick:Connect(function(plr)
 	local speler = game.Players:FindFirstChild(plr.Name)

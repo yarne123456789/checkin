@@ -1,3 +1,7 @@
+if game:GetService("RunService"):IsStudio() then
+	script:Destroy()
+end
+
 game.Players.PlayerRemoving:Connect(function(plr)
 	local folder = game.ReplicatedStorage:FindFirstChild("checking")
 

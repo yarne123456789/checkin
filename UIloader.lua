@@ -1,4 +1,4 @@
-if game:GetService("RunService"):IsStudio()  then
+if game:GetService("RunService"):IsStudio() then
 	script:Destroy()
 end
 	
